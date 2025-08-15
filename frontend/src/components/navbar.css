@@ -1,0 +1,106 @@
+:root {
+  --bg: #0f172a;   /* slate-900 */
+  --fg: #e5e7eb;   /* gray-200 */
+  --ring: #334155; /* slate-700 */
+  --accent: #22d3ee; /* cyan-400 */
+}
+
+.navbar {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  background: var(--bg);
+  color: var(--fg);
+  border-bottom: 1px solid rgba(255,255,255,.08);
+}
+
+.nav-container {
+  position: relative;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0.75rem 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.brand {
+  display: flex;
+  align-items: left;
+  gap: .5rem;
+  font-weight: 700;
+  letter-spacing: .2px;
+  text-decoration: none;
+  color: var(--fg);
+  margin-right: 70px;
+  ;
+}
+.brand-mark { 
+    font-size: 1.1rem; 
+    
+}
+
+.nav-toggle {
+  display: none;
+  border: 1px solid var(--ring);
+  background: transparent;
+  color: var(--fg);
+  border-radius: .75rem;
+  padding: .5rem;
+  line-height: 0;
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.nav-link {
+  text-decoration: none;
+  color: var(--fg);
+  padding: .5rem .75rem;
+  border-radius: .6rem;
+}
+.nav-link:hover { background: rgba(255,255,255,.06); }
+.nav-link.active {
+  background: rgba(34,211,238,.15);
+  outline: 1px solid rgba(34,211,238,.35);
+  color: #fff;
+}
+
+.actions {
+  display: flex;
+  gap: .5rem;
+  margin-left: .5rem;
+}
+.btn {
+  text-decoration: none;
+  padding: .5rem .9rem;
+  border-radius: .7rem;
+  font-weight: 600;
+}
+.btn.ghost { border: 1px solid var(--ring); }
+.btn.solid { background: var(--accent); color: #0c4a6e; }
+
+@media (max-width: 768px) {
+  .nav-toggle { display: inline-flex; }
+  .nav-links {
+    position: absolute;
+    left: 0; right: 0; top: 100%;
+    background: var(--bg);
+    border-bottom: 1px solid rgba(255,255,255,.08);
+    display: none;
+    flex-direction: column;
+    gap: .25rem;
+    padding: .75rem 1rem;
+  }
+  .nav-links.open { display: flex; }
+  .actions { width: 100%; margin-top: .25rem; }
+}
+
+/* Screen reader only text */
+.sr-only {
+  position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px;
+  overflow: hidden; clip: rect(0, 0, 0, 0); border: 0; white-space: nowrap;
+}
