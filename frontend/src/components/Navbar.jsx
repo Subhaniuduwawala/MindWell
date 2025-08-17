@@ -13,7 +13,7 @@ export default function Navbar() {
     { to: "/service", label: "SERVICE" },
     { to: "/counselors", label: "COUNSELORS" },
     { to: "/contact", label: "SUPPORT" },
-    { to: "/about", label: "ABOUT US" },
+    { to: "/about", label: "ABOUTUS" },
   ];
 
   return (
@@ -65,7 +65,7 @@ export default function Navbar() {
 
           <div className="actions">
             <Link to="/login" className="btn ghost" onClick={close}>Log in</Link>
-            <Link to="/signup" className="btn solid" onClick={close}>Sign up</Link>
+            <Link to="/signup" className="btn solid" onClick={close}>Signup</Link>
           </div>
         </nav>
       </div>

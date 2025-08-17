@@ -1,3 +1,4 @@
+
 import React from "react";
 import "./Service.css";
 import image1 from "./assets/image1.jpg";
@@ -37,7 +38,7 @@ const Service = () => {
         <div className="service-card">
           <img src={image13} alt="Service 1" />
           <h3>Understand Your Emotions</h3>
-          <p>Guided meditation to help you navigate and understand your feelings.</p>
+          <p>Explore guided meditations and calming exercises to regain focus and inner peace. Simple techniques can make a big difference in your daily life.</p>
         </div>
         <div className="service-card">
           <img src={image15} alt="Service 2" />
@@ -47,12 +48,12 @@ const Service = () => {
         <div className="service-card">
           <img src={image14} alt="Service 3" />
           <h3>Express and Reflect</h3>
-          <p>Journaling prompts and reflection tips for mental clarity.</p>
+          <p>Whether it's through journaling, art, or goal-setting, creative expression supports your healing process. MindWell encourages you to reconnect with yourself.</p>
         </div>
         <div className="service-card">
           <img src={image16} alt="Service 4" />
           <h3>Feel Empowered Again</h3>
-          <p>Daily affirmations and strategies to boost confidence.</p>
+          <p>Step into clarity, confidence, and emotional freedom. With the right tools and support, you can rise above challenges and feel like yourself again.</p>
         </div>
       </section>
 
@@ -102,4 +103,4 @@ const Service = () => {
   );
 };
 
-export default Service;
+export default Service;   
