@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { Link, NavLink } from "react-router-dom";
 import "./navbar.css";
+import logo1 from "../assets/logo1.png";
 
 export default function Navbar() {
   const [open, setOpen] = useState(false);
@@ -18,9 +19,12 @@ export default function Navbar() {
   return (
     <header className="navbar">
       <div className="nav-container">
-        <Link to="/" className="brand" onClick={close}>
-          <span className="brand-mark">⚡</span> WellMind 
-        </Link>
+       <Link to="/" className="brand" onClick={close}>
+     <img src={logo1} 
+      className="brand-mark"  
+        />
+        MindWell
+      </Link>
 
         <button
           className="nav-toggle"

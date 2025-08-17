@@ -1,8 +1,10 @@
 :root {
-  --bg: #0f172a;   /* slate-900 */
-  --fg: #e5e7eb;   /* gray-200 */
-  --ring: #334155; /* slate-700 */
-  --accent: #22d3ee; /* cyan-400 */
+  --bg: #0a1e5c;   
+  --fg: #ffffff;   
+  --ring: #334155; 
+  --accent: #ffd700; 
+  --logout-bg: #4b56e2; 
+  --logout-hover: #3a44c2; 
 }
 
 .navbar {
@@ -22,23 +24,29 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
+   
 }
 
 .brand {
-  display: flex;
-  align-items: left;
+    display: flex;
+  align-items: center;
   gap: .5rem;
   font-weight: 700;
-  letter-spacing: .2px;
   text-decoration: none;
   color: var(--fg);
   margin-right: 70px;
+  font-size: 1.25rem;
+ 
   ;
 }
 .brand-mark { 
-    font-size: 1.1rem; 
-    
-}
+      width: 50px; 
+      height: 50px; 
+      border-radius: 50%;
+      object-fit: cover;
+      margin-right: 8px;
+      
+    }
 
 .nav-toggle {
   display: none;
@@ -57,16 +65,19 @@
 }
 
 .nav-link {
-  text-decoration: none;
-  color: var(--fg);
+   text-decoration: none;
+  color: var(--accent); /* yellow */
+  font-weight: bold;
   padding: .5rem .75rem;
   border-radius: .6rem;
-}
-.nav-link:hover { background: rgba(255,255,255,.06); }
+  text-transform: uppercase;
+} 
+
+.nav-link:hover { color:yellow; }
 .nav-link.active {
-  background: rgba(34,211,238,.15);
-  outline: 1px solid rgba(34,211,238,.35);
-  color: #fff;
+  background: white;
+  color: black;
+  font-weight: bold;
 }
 
 .actions {
@@ -80,8 +91,21 @@
   border-radius: .7rem;
   font-weight: 600;
 }
-.btn.ghost { border: 1px solid var(--ring); }
-.btn.solid { background: var(--accent); color: #0c4a6e; }
+.btn.ghost { background: var(--ring);
+  color: white;
+  padding: .5rem 1rem;
+  border-radius: 10px;
+  font-weight: bold;
+  border: 1px solid var(--fg);
+  cursor: pointer; }
+
+.btn.solid { background: var(--logout-bg);
+  color: white;
+  padding: .5rem 1rem;
+  border-radius: 10px;
+  font-weight: bold;
+  border: none;
+  cursor: pointer;}
 
 @media (max-width: 768px) {
   .nav-toggle { display: inline-flex; }
