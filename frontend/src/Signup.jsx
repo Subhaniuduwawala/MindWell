@@ -2,6 +2,11 @@ import { useState } from "react";
 import 'bootstrap/dist/css/bootstrap.min.css'
 import axios from 'axios'
 import {Link, useNavigate} from 'react-router-dom'
+import "./Signup.css";
+import logo1 from "./assets/logo1.png";
+import Background from "./assets/Background.mp4";
+
+
 
 function Signup() {
     const [name, setName] = useState()
@@ -18,57 +23,68 @@ function Signup() {
     }
 
   return (
-    <div className="d-flex justify-content-center align-items-center bg-secondary vh-100">
-      <div className="bg-white p-3 rounded w-25">
-        <h2>Register</h2>
+    <div className="signup-container">
+      {/* Background Video */}
+      <video autoPlay muted loop className="bg-video">
+        <source src={Background} type="video/mp4" />
+        Your browser does not support HTML5 video.
+      </video>
+
+      {/* Signup Card */}
+      <div className="form-box">
+        <div className="text-center mb-3">
+          <img
+            src={logo1}
+            alt="Logo"
+            style={{ width: "60px", marginBottom: "10px" }}
+          />
+          <h2 className="fw-bold">Sign Up</h2>
+        </div>
         <form onSubmit={handleSubmit}>
-        <div className="mb-3">
-            <label htmlFor="email">
+          <div className="mb-3">
+            <label>
               <strong>Name</strong>
             </label>
             <input
               type="text"
               placeholder="Enter Name"
-              autoComplete="off"
-              name="email"
               className="form-control rounded-0"
               onChange={(e) => setName(e.target.value)}
             />
           </div>
           <div className="mb-3">
-            <label htmlFor="email">
+            <label>
               <strong>Email</strong>
             </label>
             <input
               type="email"
               placeholder="Enter Email"
-              autoComplete="off"
-              name="email"
               className="form-control rounded-0"
               onChange={(e) => setEmail(e.target.value)}
             />
           </div>
           <div className="mb-3">
-            <label htmlFor="email">
+            <label>
               <strong>Password</strong>
             </label>
             <input
               type="password"
               placeholder="Enter Password"
-              name="password"
               className="form-control rounded-0"
               onChange={(e) => setPassword(e.target.value)}
             />
           </div>
-          <button type="submit" className="btn btn-success w-100 rounded-0">
-            Register
+          <button type="submit" className="btn btn-primary w-100 fw-bold">
+            Sign Up
           </button>
-          </form>
-          <p>Already Have an Account</p>
-          <Link to="/login" className="btn btn-default border w-100 bg-light rounded-0 text-decoration-none">
-            Login
-          </Link>
-        
+        </form>
+        <p className="text-center mt-2">Already have an account</p>
+        <Link
+          to="/login"
+          className="btn btn-secondary w-100 fw-bold text-white"
+        >
+          Login
+        </Link>
       </div>
     </div>
   );

@@ -8,6 +8,14 @@ import image26 from "./assets/image26.jpg";
 import image27 from "./assets/image27.jpg";
 import image28 from "./assets/image28.jpg";
 import image29 from "./assets/image29.jpg";
+import image30 from "./assets/image30.jpg";
+import image31 from "./assets/image31.jpg";
+import image32 from "./assets/image32.jpg";
+import image33 from "./assets/image33.jpg";
+import image34 from "./assets/image34.jpg";
+import image35 from "./assets/image35.jpg";
+import image36 from "./assets/image36.jpg";
+
 
 
 
@@ -70,7 +78,7 @@ const ALL_COUNSELORS = [
     approach: "Humanistic Therapy, Identity-affirming conversations",
     quote: "Providing a safe, inclusive space to talk openly and heal freely.",
     rating: 2,
-    image: image3,
+    image: image31,
   },
 
   // --- Extra counselors (shown after clicking "Show More") ---
@@ -82,7 +90,7 @@ const ALL_COUNSELORS = [
     approach: "CBT, Mindfulness",
     quote: "Equipping you with practical tools to quiet the mind.",
     rating: 4,
-    image: image3,
+    image: image34,
   },
   {
     name: "Mr. Harith Senarath",
@@ -92,7 +100,7 @@ const ALL_COUNSELORS = [
     approach: "Behavioral Activation, Supportive Therapy",
     quote: "Small steps forward can change the direction of your life.",
     rating: 4,
-    image: image3,
+    image: image32,
   },
   {
     name: "Dr. Menaka Wijeratne",
@@ -102,7 +110,7 @@ const ALL_COUNSELORS = [
     approach: "Play Therapy, Family Systems",
     quote: "Creating safe spaces where young minds feel seen and heard.",
     rating: 5,
-    image: image3,
+    image: image33,
   },
   {
     name: "Ms. Piumi Ranasinghe",
@@ -112,7 +120,7 @@ const ALL_COUNSELORS = [
     approach: "MBSR, Breathwork",
     quote: "Come back to the present—where calm and clarity live.",
     rating: 4,
-    image: image3,
+    image: image35,
   },
   {
     name: "Mr. Sanjaya Jayasuriya",
@@ -122,7 +130,7 @@ const ALL_COUNSELORS = [
     approach: "Motivational Interviewing, Relapse Prevention",
     quote: "Recovery is possible—and you don’t have to do it alone.",
     rating: 4,
-    image: image3,
+    image: image36,
   },
   {
     name: "Ms. Dinithi Abeysekara",
@@ -132,7 +140,7 @@ const ALL_COUNSELORS = [
     approach: "EMDR-informed, Stabilization Skills",
     quote: "Gentle healing that respects your pace and your story.",
     rating: 5,
-    image:image3,
+    image:image30,
   },
 ];
 

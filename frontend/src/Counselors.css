@@ -60,7 +60,7 @@
   max-width: 780px;
   font-size: clamp(1rem, 2.2vw, 1.2rem);
   line-height: 1.7;
-    margin: 0.8rem auto;
+  margin: 0.8rem auto;
   text-shadow: 1px 1px 8px rgba(0,0,0,0.45);
 }
 
