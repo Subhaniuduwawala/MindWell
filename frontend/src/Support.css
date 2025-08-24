@@ -1,0 +1,113 @@
+.support-page {
+  font-family: 'Segoe UI', sans-serif;
+  color: #333;
+  background-color: #f5f5f5;
+  padding: 40px 20px;
+}
+
+/* Page Heading */
+.support-page h1 {
+  text-align: center;
+  font-size: 2.5rem;
+  color: #003366;
+  margin-bottom: 10px;
+}
+
+.support-page .intro {
+  text-align: center;
+  font-size: 1.2rem;
+  color: #555;
+  margin-bottom: 40px;
+}
+
+/* Sections */
+.support-section {
+  background: #ffffff;
+  border: 3px solid #c6c8f5;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+  padding: 30px;
+  margin: 20px auto;
+  max-width: 1000px;
+  text-align: center;
+  transition: transform 0.2s ease;
+}
+
+.support-section:hover {
+  transform: translateY(-2px);
+}
+
+.support-section h2 {
+  color: #1565c0;
+  font-size: 1.8rem;
+  margin-bottom: 15px;
+}
+
+.support-section p {
+  font-size: 1rem;
+  margin-bottom: 20px;
+  color: #444;
+}
+
+/* Buttons */
+.btn {
+  background-color: #003366;
+  color: #fff;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.3s;
+  font-size: 1rem;
+}
+
+.btn:hover {
+  background-color: #0059b3;
+}
+
+/* Game iframe */
+.game-frame {
+  width: 100%;
+  max-width: 800px;
+  height: 450px;
+  border: 3px solid #c6c8f5;
+  border-radius: 10px;
+  margin-top: 15px;
+}
+
+/* Breathing Circle */
+.breathing-circle {
+  width: 140px;
+  height: 140px;
+  margin: 30px auto;
+  border-radius: 50%;
+  background: #81c784;
+  animation: breathe 6s infinite ease-in-out;
+}
+
+@keyframes breathe {
+  0% { transform: scale(1); opacity: 0.7; }
+  50% { transform: scale(1.5); opacity: 1; }
+  100% { transform: scale(1); opacity: 0.7; }
+}
+
+/* Quote */
+blockquote {
+  font-size: 1.2rem;
+  font-style: italic;
+  color: #444;
+  border-left: 4px solid #4caf50;
+  padding-left: 15px;
+  margin-top: 20px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .game-frame {
+    height: 300px;
+  }
+
+  .support-section {
+    padding: 20px;
+  }
+}

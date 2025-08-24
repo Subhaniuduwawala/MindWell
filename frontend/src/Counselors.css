@@ -1,3 +1,7 @@
+/* Add margin to DataGrid container */
+.mui-datagrid-margin {
+  margin: 24px !important;
+}
 .counselors-page {
   font-family: "Poppins", sans-serif;
   background: #f5f7fb;
@@ -403,3 +407,6 @@
 @media (max-width: 900px) {
   .counselors-page { padding: 0 0.6rem; }
 }
+
+
+

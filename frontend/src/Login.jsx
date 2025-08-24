@@ -1,13 +1,12 @@
-
 import React, { useState } from 'react';
 import { Link, useNavigate } from "react-router-dom";
 import axios from 'axios';
 import "./Login.css";
 import logo1 from "./assets/logo1.png";
-import { TbBackground } from 'react-icons/tb';
 import Background from "./assets/Background.mp4";
 
 function Login() {
+  const [username, setUsername] = useState("");  // NEW
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [error, setError] = useState("");
@@ -19,8 +18,18 @@ function Login() {
     setError("");
     setLoading(true);
     try {
-      const response = await axios.post('http://localhost:3001/login', { email, password });
+      // Send username + email + password
+      const response = await axios.post('http://localhost:3001/login', { 
+        username, email, password 
+      });
+
       if (response.data.Status === "Success") {
+        // Save login info
+        localStorage.setItem("userRole", response.data.role);
+        localStorage.setItem("username", response.data.username);
+        localStorage.setItem("email", response.data.email);
+        
+            
         navigate('/Home');
       } else {
         setError(response.data.message || "Login failed. Please try again.");
@@ -62,6 +71,22 @@ function Login() {
         )}
 
         <form onSubmit={handleSubmit}>
+          {/* Username */}
+          <div className="mb-3">
+            <label>
+              <strong>Username</strong>
+            </label>
+            <input
+              type="text"
+              placeholder="Enter Username"
+              className="form-control rounded-0"
+              value={username}
+              onChange={(e) => setUsername(e.target.value)}
+              required
+            />
+          </div>
+
+          {/* Email */}
           <div className="mb-3">
             <label>
               <strong>Email</strong>
@@ -77,6 +102,7 @@ function Login() {
             />
           </div>
 
+          {/* Password */}
           <div className="mb-3">
             <label>
               <strong>Password</strong>

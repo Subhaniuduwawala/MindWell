@@ -11,17 +11,20 @@ export default function Navbar() {
   const close = () => setOpen(false);
 
   const handleLogout = () => {
-    localStorage.removeItem("token");
+    localStorage.clear(); // remove token + role + username
     sessionStorage.clear();
     navigate("/login");
     close();
   };
 
+  // 👇 Read role saved from login
+  const userRole = localStorage.getItem("userRole"); // "admin" or "employee"
+
   const links = [
     { to: "/home", label: "HOME" },
     { to: "/service", label: "SERVICE" },
     { to: "/counselors", label: "COUNSELORS" },
-    { to: "/contact", label: "SUPPORT" },
+    { to: "/support", label: "SUPPORT" },
     { to: "/about", label: "ABOUTUS" },
   ];
 
@@ -75,6 +78,13 @@ export default function Navbar() {
             <button className="btn solid" onClick={handleLogout}>
               Logout
             </button>
+
+            {/* 👇 Only show Admin if role is admin */}
+            {userRole === "admin" && (
+              <NavLink to="/admin/appointments" className="admin" onClick={close}>
+                Admin
+              </NavLink>
+            )}
           </div>
         </nav>
       </div>

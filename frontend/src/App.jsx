@@ -6,6 +6,8 @@ import Signup from "./Signup";
 import Home from "./Home";
 import Service from "./Service";
 import Counselors from "./Counselors"; 
+import Admin from "./Admin";
+import Support from "./Support";
 
 function App() {
   const { pathname } = useLocation();
@@ -21,6 +23,8 @@ function App() {
         <Route path="/home" element={<Home />} />
         <Route path="/service" element={<Service />} />
         <Route path="/counselors" element={<Counselors />} /> 
+        <Route path="/support" element={<Support />} />   {/* lowercase */}
+        <Route path="/admin/appointments" element={<Admin />} /> 
       </Routes>
       {!hideLayout && <Footer />}
     </>

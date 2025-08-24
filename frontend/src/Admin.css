@@ -1,0 +1,30 @@
+.admin-appointments {
+  padding: 20px;
+}
+
+.admin-appointments h2 {
+  margin-bottom: 15px;
+}
+
+.appointments-table {
+  width: 100%;
+  border-collapse: collapse;
+  background: #fff;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.appointments-table th,
+.appointments-table td {
+  border: 1px solid #ddd;
+  padding: 10px;
+  text-align: left;
+}
+
+.appointments-table th {
+  background: #0a1e5c;
+  color: white;
+}
+
+.appointments-table tr:nth-child(even) {
+  background: #f9f9f9;
+}
