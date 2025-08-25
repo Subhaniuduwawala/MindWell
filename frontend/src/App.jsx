@@ -8,6 +8,7 @@ import Service from "./Service";
 import Counselors from "./Counselors"; 
 import Admin from "./Admin";
 import Support from "./Support";
+import AboutUs from "./Aboutus";
 
 function App() {
   const { pathname } = useLocation();
@@ -24,6 +25,7 @@ function App() {
         <Route path="/service" element={<Service />} />
         <Route path="/counselors" element={<Counselors />} /> 
         <Route path="/support" element={<Support />} />   {/* lowercase */}
+        <Route path="/about" element={<AboutUs />} />
         <Route path="/admin/appointments" element={<Admin />} /> 
       </Routes>
       {!hideLayout && <Footer />}

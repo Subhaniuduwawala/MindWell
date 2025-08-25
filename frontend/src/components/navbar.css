@@ -98,7 +98,7 @@ header.navbar .nav-link.active {
 }
 .admin {
    text-decoration: none;
-  color:rgb(254, 0, 0); /* yellow */
+  color:rgb(255, 255, 0); /* yellow */
   font-weight: bold;
   padding: 10px 15px;
   border-radius: 0.3rem;
@@ -128,7 +128,7 @@ header.navbar .nav-link.active {
 }
 .btn.ghost { background: var(--ring);
   color: white;
-  padding: .5rem 1rem;
+  padding: .7rem 1rem;
   border-radius: 10px;
   width: 100px;
   font-weight: bold;
