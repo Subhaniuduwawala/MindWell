@@ -4,6 +4,7 @@ const cors = require("cors");
 const bcrypt = require('bcrypt');
 const EmployeeModel = require('./models/Employee');
 const AppointmentModel = require('./models/Appointment'); // Appointment schema
+const MessageModel = require("./models/Message"); 
 
 const app = express();
 app.use(cors());
@@ -126,6 +127,42 @@ app.put('/appointments/:id', async (req, res) => {
     res.status(500).json({ error: 'Failed to update appointment' });
   }
 });
+
+// ================= CONTACT FORM API ==================
+app.post("/contact", async (req, res) => {
+  try {
+    const { name, email, message } = req.body;
+    const newMessage = new MessageModel({ name, email, message });
+    await newMessage.save();
+    res.status(201).json({ message: "Message sent successfully!" });
+  } catch (err) {
+    console.error("Message save error:", err);
+    res.status(500).json({ error: "Failed to send message" });
+  }
+});
+
+// Save new message
+app.post("/messages", async (req, res) => {
+  try {
+    const newMessage = new MessageModel(req.body);
+    await newMessage.save();
+    res.status(201).json({ message: "Message saved successfully!" });
+  } catch (err) {
+    console.error("Message save error:", err);
+    res.status(500).json({ error: "Failed to save message" });
+  }
+});
+
+// Get all messages (for Admin)
+app.get("/messages", async (req, res) => {
+  try {
+    const messages = await MessageModel.find().sort({ createdAt: -1 });
+    res.json(messages);
+  } catch (err) {
+    res.status(500).json({ error: "Failed to fetch messages" });
+  }
+});
+
 
 // ==================== SERVER ====================
 app.listen(3001, () => {

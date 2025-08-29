@@ -11,6 +11,8 @@ const Icon = {
   sleep: () => <span>😴</span>,
   lotus: () => <span>🧘</span>,
   book: () => <span>📚</span>,
+  heart: () => <span>❤️</span>,
+  sun: () => <span>🌞</span>,
 };
 
 /** ---------- Existing Sections (shortened for clarity) ---------- */
@@ -74,7 +76,11 @@ function Affirmations() {
         <span className="icon-wrap"><Icon.quote /></span>
         <h2>Affirmations</h2>
       </header>
-      <blockquote className="affirmation">“I am safe; I am present.”</blockquote>
+      <blockquote className="affirmation">“I choose to love myself unconditionally.”</blockquote>
+      <blockquote className="affirmation">“I am capable of achieving my goals.”</blockquote>
+      <blockquote className="affirmation">“Every day, I am thankful for the blessings in my life.”</blockquote>
+      <blockquote className="affirmation">“I trust that everything will work out as it should.”</blockquote>
+      <blockquote className="affirmation">“I believe in my abilities.”</blockquote>
     </section>
   );
 }
@@ -167,14 +173,75 @@ function SleepSounds() {
   );
 }
 
+/** ---------- NEW SECTIONS ---------- */
+function HeartfulActivities() {
+  return (
+    <section className="card">
+      <header className="card-header">
+        <span className="icon-wrap"><Icon.heart /></span>
+        <h2>Heartful Activities</h2>
+      </header>
+      <p>Engage in activities that warm the heart like drawing, crafting, or writing a letter.</p>
+      <ul className="tips">
+        <li><strong>Sketching:</strong> Try a small drawing session for relaxation.</li>
+        <li><strong>Crafting:</strong> Build something with your hands.</li>
+        <li><strong>Letter Writing:</strong> Write a letter to someone you care about.</li>
+      </ul>
+    </section>
+  );
+}
+
+function MorningRitual() {
+  return (
+    <section className="card">
+      <header className="card-header">
+        <span className="icon-wrap"><Icon.sun /></span>
+        <h2>Morning Ritual</h2>
+      </header>
+      <p>Start your day with a calming ritual to set a positive tone.</p>
+      <ul className="tips">
+        <li><strong>Sunrise Stretch:</strong> Gently stretch to wake up your body.</li>
+        <li><strong>Warm Drink:</strong> Sip a hot beverage and focus on the warmth.</li>
+        <li><strong>Mindful Breathing:</strong> Take 3 deep, mindful breaths before starting your day.</li>
+      </ul>
+    </section>
+  );
+}
+
+function DailyAffirmation() {
+  const affirmations = [
+    "I am enough just as I am.",
+    "I choose to be happy and positive.",
+    "I am confident in my abilities.",
+    "I am worthy of love and respect.",
+    "I trust myself and the process of life.",
+    "I am in control of my thoughts and emotions.",
+    "I am grateful for this moment and the opportunities it brings.",
+    "I radiate positivity and attract good things into my life."
+  ];
+
+  const randomAffirmation = affirmations[Math.floor(Math.random() * affirmations.length)];
+
+  return (
+    <section className="card">
+      <header className="card-header">
+        <span className="icon-wrap"><Icon.quote /></span>
+        <h2>Daily Affirmation</h2>
+      </header>
+      <blockquote className="affirmation">{randomAffirmation}</blockquote>
+    </section>
+  );
+}
+
+
+
+
 /** ---------- Page ---------- */
 export default function Support() {
   return (
     <main className="support-page">
-      
-
       {/* Hero */}
-      <section className="hero">
+      <section className="hero3">
         <video
           src={heroVideo}
           autoPlay
@@ -198,11 +265,12 @@ export default function Support() {
         <CalmColoring />
         <HelpfulArticles />
         <SleepSounds />
+        <HeartfulActivities />
+        <MorningRitual />
+        <DailyAffirmation />
       </div>
 
-      <footer className="foot">
-        <small>Note: This page offers wellbeing support but isn’t a substitute for professional care.</small>
-      </footer>
+      
     </main>
   );
 }

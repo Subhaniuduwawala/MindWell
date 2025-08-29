@@ -10,6 +10,7 @@ import Admin from "./Admin";
 import Support from "./Support";
 import AboutUs from "./Aboutus";
 
+
 function App() {
   const { pathname } = useLocation();
   const hideLayout = ["/", "/login", "/register"].includes(pathname.toLowerCase());
@@ -26,6 +27,7 @@ function App() {
         <Route path="/counselors" element={<Counselors />} /> 
         <Route path="/support" element={<Support />} />   {/* lowercase */}
         <Route path="/about" element={<AboutUs />} />
+        
         <Route path="/admin/appointments" element={<Admin />} /> 
       </Routes>
       {!hideLayout && <Footer />}

@@ -7,6 +7,7 @@
 .hero {
   background: url('C:\Users\Asus\Documents\Project\WellMind\Mental Health Support Network website\frontend\src\assets\image1.jpg') center/cover no-repeat;
   height: 80vh;
+  width: 100%;
   display: flex;
   align-items: center;
   justify-content: center;

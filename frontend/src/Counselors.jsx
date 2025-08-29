@@ -273,15 +273,15 @@ const Counselors = () => {
   return (
     <div className="counselors-page">
       {/* Hero */}
-      <section className="hero" aria-label="Welcome banner">
+      <section className="hero2" aria-label="Welcome banner">
         <video src={heroVideo} autoPlay muted loop playsInline className="hero-video2" />
-        <div className="hero-overlay" />
-        <div className="hero-content">
+        <div className="hero-overlay2" />
+        <div className="hero-content2">
           <h1>Your Mental Health Matters</h1>
           <p>Connect with qualified, compassionate counselors in a safe and confidential space.</p>
-          <div className="hero-cta-row">
-            <button className="hero-btn" onClick={scrollToList}>Meet Our Counselors</button>
-            <a className="hero-link" href="#appointment">Book an Appointment →</a>
+          <div className="hero-cta-row2">
+            <button className="hero-btn2" onClick={scrollToList}>Meet Our Counselors</button>
+            <a className="hero-link2" href="#appointment">Book an Appointment →</a>
           </div>
         </div>
       </section>
